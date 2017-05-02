@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Shapes
 {
-	public class Square : Shape
+	public class Square : Rectangle
 	{
 		public int _side { get; private set; }
-
+		
 		public Square(int side)
 		{
 			_side = side;
@@ -17,12 +17,17 @@ namespace Shapes
 
 		public override double CalculateArea()
 		{
-			return _side ^ 2;
+			return Math.Pow(_side, 2);
 		}
 
 		public override string GetShapeType()
 		{
 			return typeof(Square).Name;
+		}
+
+		public override double CalculateRectangleArea()
+		{
+			return Math.Pow(_side, 2);
 		}
 	}
 }

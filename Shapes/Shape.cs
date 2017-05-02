@@ -8,12 +8,13 @@ namespace Shapes
 {
 	public abstract class Shape
 	{
-		public string GeneralInformation { get; private set; }
+		public string GeneralInformation 
+		{ 
+			get { return "The figure is a kind of geometric figures"; }			
+		}
 
 		protected Shape()
-		{
-			GeneralInformation = "The figure is a kind of geometric figures";
-		}
+		{ }
 
 		public abstract double CalculateArea();
 
